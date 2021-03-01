@@ -21,9 +21,13 @@ window.addEventListener('load', function () {
   
       treeitems[i].addEventListener('click', function (event) {
         var treeitem = event.currentTarget;
-        var label = treeitem.getAttribute('aria-label');
+
+        var label = treeitem.getElementsByTagName('span')[0];
         if (!label) {
           label = treeitem.innerHTML;
+        }
+        else {
+          label = treeitem.getElementsByTagName('span')[0].innerHTML;
         }
   
         document.getElementById('last_action').value = label.trim();
