@@ -199,7 +199,6 @@ window.addEventListener('load', function () {
   };
   
   Tree.prototype.updateVisibleTreeitems = function () {
-    debugger;
     this.firstTreeitem = this.treeitems[0];
   
     for (var i = 0; i < this.treeitems.length; i++) {
